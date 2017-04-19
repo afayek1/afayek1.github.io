@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="../stylesheets/stylesheet.css?v=2.3">
+  <!--Syntax Highlighter-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script type="text/javascript" src="../stylesheets/syntaxhighlighter/scripts/shCore.js"></script>
+  <script type="text/javascript" src="../stylesheets/syntaxhighlighter/scripts/shBrushRuby.js"></script>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/syntaxhighlighter/styles/shCoreDefault.css"/>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <!--End of Syntax Highlighter-->
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <h1><a href="../index.html">Amir Fayek</a></h1>
+    <nav role="navigation">
+      <ul>
+        <li><a href="../about/index.html">About Me</a></li>
+        <li><a href="../resume/index.html">Resume</a></li>
+        <li><a href="../projects/index.html">Projects</a></li>
+        <li><a href="../blog-posts/index.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div id="wrapper">
+    <div class="content">
+    <h1>Blog.</h1>
+      <div class="main-box">
+        <h2>Object Oriented Programming</h2>
+        <p id='date'>September 29, 2014</p>
+        <p>Object oriented programming (OOP) is a paradigm that allows us to model the real world. Using OOP, we create objects which contain state and behavior contained in a single unit. This is in contrast to more traditional paradigms, such as the procedural paradigm, where programs are written step by step, and for the most part, go from top to bottom. This will make more sense as we go on, I promise…</p>
+
+        <h3>Classes</h3>
+        <p>Classes provide the blueprint for our object. A class is just a way of organizing and producing objects with similar attributes and methods. Take a look at our Stereo example below. Don’t try and understand all the code below, but take a look at it briefly and see if it makes any sense. Every time we create, or instantiate, an object from this class, they follow this basic blue print.</p>
+        <br>
+        <pre class="brush: ruby;">
+
+        class Stereo
+
+          def initialize
+            @current_volume = 0
+            @source = "radio"
+          end
+
+          def change_source
+            @source = "cd" if cd_button
+            @source = "tuner" if tuner_button
+          end
+
+          def change_volume
+            @current_volume-=1 if volume_down_button
+            @current_volume+=1 if volume_up_button
+          end
+
+        end
+        </pre>
+
+        <h3>Instance Variables</h3>
+
+        <p>Objects instantiated from a class have have their own, individual copies of the variables specified in the class, meaning each instance of a class has it’s own, separate copy of it’s instance variables. For example, all Stereos may have an instance variable, volume, but each stereo’s volume can be changed without affecting another stereo’s volume. In Ruby, instance variables are denoted by @, as in @current_volume. Unlike a local variable which only exists within the method it is defined in (a concept known as scope), an instance variable can be accessed from anywhere within the object. Generally, when we want to store values, for example, to be accessed later, we store it in an instance variable which becomes part of the object’s state.</p>
+        <br>
+
+      </div>
+
+      </div>
+  </div>
+<footer>
+    <nav>
+      <ul>
+         <li><a href="https://twitter.com/RealAmirFayek"><img class="social-media-icons" src="../img/twitter-sign.svg" alt="Twitter" /></a></li>
+         <li><a href="https://github.com/afayek1"><img class="social-media-icons" src="../img/github-sign.svg" alt="GitHub"/></a></li>
+         <li><a href="https://www.linkedin.com/in/amirfayek"><img class="social-media-icons" src="../img/linkedin-sign.svg" alt="Linkedin"/></a></li></a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

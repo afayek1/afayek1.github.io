@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Blog</title>
+  <link rel="stylesheet" href="../stylesheets/stylesheet.css?v=2.1">
+  <!--Syntax Highlighter-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script type="text/javascript" src="../stylesheets/syntaxhighlighter/scripts/shCore.js"></script>
+  <script type="text/javascript" src="../stylesheets/syntaxhighlighter/scripts/shBrushRuby.js"></script>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/syntaxhighlighter/styles/shCoreDefault.css"/>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <!--End of Syntax Highlighter-->
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <h1><a href="../index.html">Amir Fayek</a></h1>
+    <nav role="navigation">
+      <ul>
+        <li><a href="../about/index.html">About Me</a></li>
+        <li><a href="../resume/index.html">Resume</a></li>
+        <li><a href="../projects/index.html">Projects</a></li>
+        <li><a href="../blog-posts/index.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div id="wrapper">
+    <div class="content">
+    <h1>Blog.</h1>
+      <div class="main-box">
+        <h2>Hashes</h2>
+        <p id="date">September 22, 2014</p>
+
+        <p>A hash consists of unique keys which map to their value. For example, if we were looking at a menu, we may have something like this:</p>
+        <pre class="brush: ruby;">
+			 appetizers = {
+				“egg rolls": 3.99,
+				“chicken wings” =>5.99,
+				“sliders” =>5.99,
+				“mini tacos” => 4.99
+			}</pre>
+
+        <p>Notice that while our keys, ie. “egg rolls”, “chicken wings,” etc… are unique, the prices are not. So why is this useful? And how does it work? The topic itself is far more complex than I will get into, but this blog will serve as an introduction.</p>
+        <br>
+        <p>When keys are mapped to values, the key undergoes a hashing algorithm that essentially provides an address we can use to look up a value. These values are stored in buckets, and in an ideal situation, each key maps to a single address. Unfortunately, this is something we normally can’t avoid, but for simplicity we will assume these “collisions” don’t occur as there are ways to deal with them. Basically, the point we want to get across, is that given a key, we can immediately find it’s value by putting the key through a hashing algorithm. What this does is allow us to look up a value, given a key, instantly, and this is one of the main reasons we use hash maps.</p>
+        <br>
+
+      </div>
+
+      </div>
+  </div>
+<footer>
+    <nav>
+      <ul>
+         <li><a href="https://twitter.com/RealAmirFayek"><img class="social-media-icons" src="../img/twitter-sign.svg" alt="Twitter" /></a></li>
+         <li><a href="https://github.com/afayek1"><img class="social-media-icons" src="../img/github-sign.svg" alt="GitHub"/></a></li>
+         <li><a href="https://www.linkedin.com/in/amirfayek"><img class="social-media-icons" src="../img/linkedin-sign.svg" alt="Linkedin"/></a></li></a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

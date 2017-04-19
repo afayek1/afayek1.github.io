@@ -1,0 +1,41 @@
+.sticker {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.sticker-top, .sticker-bottom {
+  background-color: red;
+}
+
+.sticker-top {
+  border-radius: 25px 25px 0 0;
+  padding-bottom: 3px;
+}
+
+.sticker-top h1, h2 {
+  font-family: courier;
+  color: white;
+  margin-top: 0;
+}
+
+.sticker-top h1 {
+  font-size: 3em;
+}
+
+.sticker-top h2 {
+  font-size: 2em;
+}
+
+.sticker-middle p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sticker-bottom {
+  min-height: 20px;
+  border-radius: 0 0 25px 25px;
+}

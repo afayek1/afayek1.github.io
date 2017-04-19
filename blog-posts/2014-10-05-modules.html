@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Blog</title>
+  <link rel="stylesheet" href="../stylesheets/stylesheet.css?v=2.3">
+
+
+  <!--Syntax Highlighter-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script type="text/javascript" src="../stylesheets/syntaxhighlighter/scripts/shCore.js"></script>
+  <script type="text/javascript" src="../stylesheets/syntaxhighlighter/scripts/shBrushRuby.js"></script>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/syntaxhighlighter/styles/shCoreDefault.css"/>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <!--End of Syntax Highlighter-->
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <h1><a href="../index.html">Amir Fayek</a></h1>
+    <nav role="navigation">
+      <ul>
+        <li><a href="../about/index.html">About Me</a></li>
+        <li><a href="../resume/index.html">Resume</a></li>
+        <li><a href="../projects/index.html">Projects</a></li>
+        <li><a href="../blog-posts/index.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div id="wrapper">
+    <div class="content">
+    <h1>Blog.</h1>
+      <div class="main-box">
+        <h2>Modules</h2>
+        <p id='date'>October 5, 2014</p>
+
+        <p>In the <a href="../blog-posts/2014-09-29-object-oriented-programming.html">last blog</a></li>, we talked extensively about classes. Modules are very similar to classes. In fact, the superclass of Class is module. However, unlike classes, you cannot instantiate modules. There is only one copy of a module's data. There is no state in a module. Instead, it is simply a collection of constants and methods. So why modules? There are several reasons, but in this blog we will talk about modularity.</p>
+
+        <p>Modularity is one of the main drivers of the Don't Repeat Yourself (DRY) principle. It involves reducing repetition by breaking down code into single, generic purposes that can be reused. In modules, constants and functions are generally grouped together according to some related topic. For example, below we weill created a module called Conversion to handle simple conversions from the US system to the metric system and vice versa.</p>
+        <pre class="brush: ruby;">
+
+        module Conversion
+          def lb_to_kg(weight)
+            weight/2.2046
+          end
+          def kg_to_lb(weight)
+            weight*2.2046
+          end
+        end
+
+        class Person
+          include Conversion
+        end
+
+        class Car
+          include Conversion
+        end
+
+        frank = Person.new
+        puts frank.lb_to_kg(180)
+
+        civic = Car.new
+        puts civic.kg_to_lb(1100)
+        </pre>
+
+        <p>The example above is simplistic, but gets our point across. Rather than define the methods lb_to_kg and kg_to_lb in the classes Person and Car, we instead created a module Conversion, and used include Conversion to include it in our classes. No repetition.</p>
+
+
+      </div>
+
+      </div>
+  </div>
+<footer>
+    <nav>
+      <ul>
+         <li><a href="https://twitter.com/RealAmirFayek"><img class="social-media-icons" src="../img/twitter-sign.svg" alt="Twitter" /></a></li>
+         <li><a href="https://github.com/afayek1"><img class="social-media-icons" src="../img/github-sign.svg" alt="GitHub"/></a></li>
+         <li><a href="https://www.linkedin.com/in/amirfayek"><img class="social-media-icons" src="../img/linkedin-sign.svg" alt="Linkedin"/></a></li></a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

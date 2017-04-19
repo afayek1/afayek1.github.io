@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Blog</title>
+  <link rel="stylesheet" href="../stylesheets/stylesheet.css?v=2.3">
+
+
+  <!--Syntax Highlighter-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script type="text/javascript" src="../stylesheets/syntaxhighlighter/scripts/shCore.js"></script>
+  <script type="text/javascript" src="../stylesheets/syntaxhighlighter/scripts/shBrushRuby.js"></script>
+  <link type="text/css" rel="stylesheet" href="../stylesheets/syntaxhighlighter/styles/shCoreDefault.css"/>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <!--End of Syntax Highlighter-->
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <h1><a href="../index.html">Amir Fayek</a></h1>
+    <nav role="navigation">
+      <ul>
+        <li><a href="../about/index.html">About Me</a></li>
+        <li><a href="../resume/index.html">Resume</a></li>
+        <li><a href="../projects/index.html">Projects</a></li>
+        <li><a href="../blog-posts/index.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div id="wrapper">
+    <div class="content">
+    <h1>Blog.</h1>
+      <div class="main-box">
+        <h2>Difference between Relational and NoSQL Databases</h2>
+        <p id='date'>October 12, 2014</p>
+
+        <h3>Introduction</h3>
+        <p>Database management Systems are based on database models. Database models determine the logical structure of the database, ie. how data can be stored, organizes, and manipulated. We will discuss two of the most popular database management systems, Relational Database Management Systems (RDBMS), often called SQL databases, and NoSQL databases.</p>
+
+        <h3>Relational Databases</h3>
+        <p>The RDBMS is based on the relational model. Relations have attributes and store data in tuples. Most relational databases use SQL to manage data, and are sometimes called SQL databases.</p>
+
+        <h3>NoSQL Databases</h3>
+        <p>NoSQL databases use one of multiple models, and can essentially be classified as “non-relational” databases, thus the "No" in NoSQL. The main models which represent how data is structured, are column, document, key-value, and graph. There are many NoSQL databases, each with a specified language used to manage its data.</p>
+
+        <h3>Scalability</h3>
+        <p>In a relational databases, the entire database has to be hosted on a single server. If relational databases want to handle more data, they must scale vertically, meaning they scale by adding more power to the existing machine (ex. adding more RAM). As a result, scaling is often limited to the capacity of a single machine, and scaling this way can be expensive. NoSQL databases on the other hand can be partitioned onto multiple machines, allowing for horizontal scaling, meaning they scale by adding more machines. As the price of storage has gone down significantly over time, the popularity of NoSQL has gone up.</p>
+      </div>
+
+      </div>
+  </div>
+<footer>
+    <nav>
+      <ul>
+         <li><a href="https://twitter.com/RealAmirFayek"><img class="social-media-icons" src="../img/twitter-sign.svg" alt="Twitter" /></a></li>
+         <li><a href="https://github.com/afayek1"><img class="social-media-icons" src="../img/github-sign.svg" alt="GitHub"/></a></li>
+         <li><a href="https://www.linkedin.com/in/amirfayek"><img class="social-media-icons" src="../img/linkedin-sign.svg" alt="Linkedin"/></a></li></a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
